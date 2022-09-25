@@ -1,4 +1,4 @@
-name: 'S3 Upload Action'
+name: 'S3 Upload Action - Simplified'
 description: 'Action for uploading assets to an s3 bucket'
 branding:
   icon: 'upload'
