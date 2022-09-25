@@ -8,6 +8,12 @@ aws configure set aws_secret_access_key $2
 aws configure set region $3
 echo "-------- Configuration Complete -----------"
 echo " "
+# Check to be sure source directory exists before removing remote files
+if [ ! -d "${4}" ] 
+then
+    echo "Directory ${4} DOES NOT exist!" 
+    exit 9999 # die with error code 9999
+fi
 echo "Removing assets....."
 aws s3 rm $5 --recursive
 echo "Uploading....."
