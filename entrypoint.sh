@@ -1,4 +1,6 @@
-#!/bin/sh -l
+#!/usr/bin/bash
+set -e
+
 cd _site
 echo "-------- Configuration start -----------"
 aws configure set aws_access_key_id $1
